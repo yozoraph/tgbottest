@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Web App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Telegram Web App</h1>
+  <p>This is a simple web app embedded within Telegram.</p>
+  <button onclick="sendDataToTelegram()">Send Data to Telegram</button>
+
+  <script>
+    // Function to send data back to Telegram
+    function sendDataToTelegram() {
+      const data = { message: "Hello from the Web App!" };
+      Telegram.WebApp.sendData(JSON.stringify(data));
+    }
+  </script>
+</body>
+</html>
